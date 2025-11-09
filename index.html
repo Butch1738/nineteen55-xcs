@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nineteen55</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+  animation: fadeIn 2s ease-in;
+}
+@keyframes pulse {
+    0%, 100% {
+      opacity: 0.05;
+      text-shadow: 0 0 30px red;
+    }
+    50% {
+      opacity: 0.12;
+      text-shadow: 0 0 80px red;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateY(-20px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 0.2;
+    }
+  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: red;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 5s infinite ease-in-out;
+  }
+
+.logo {
+  margin-top: 80px;
+  animation: pulse 2s infinite alternate;
+}
+
+.logo img {
+  width: 150px;
+  filter: drop-shadow(0 0 10px red);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 10px red); }
+  100% { transform: scale(1.05); filter: drop-shadow(0 0 25px #ff0000); }
+}
+
+/* Glowing 1955 text */
+  .bg-text {
+    position: absolute;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 200px;
+    font-weight: bold;
+    color: #ff0000;
+    opacity: 0.08;
+    text-shadow: 0 0 50px red;
+    animation: pulse 3s infinite ease-in-out;
+    user-select: none;
+  }
+
+.rev-text {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #fff;
+  margin-top: 30px;
+  text-shadow: 0 0 25px red, 0 0 10px #ff5555;
+}
+
+.profile {
+  margin-top: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.profile img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px red;
+}
+
+.username {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.audio-player {
+  margin: 50px auto;
+  background-color: #111;
+  padding: 25px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 420px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  position: relative;
+}
+
+.visualizer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.bar {
+  width: 5px;
+  height: 10px;
+  margin: 0 3px;
+  background: red;
+  border-radius: 3px;
+  transition: height 0.2s;
+}
+
+.servers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 0;
+}
+
+.server-card {
+  background-color: #111;
+  width: 230px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.server-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,0,0,0.7);
+}
+
+.server-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.server-card h4 {
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.server-card p {
+  margin: 8px 0;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.join-btn {
+  background-color: #0055ff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* === Info Section (FB, IG, Discord) === */
+.info {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.info a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  background: rgba(255, 0, 0, 0.15);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,0,0,0.4);
+}
+.info a:hover {
+  background: red;
+  box-shadow: 0 0 25px red;
+}
+
+.join-btn:hover {
+  background-color: #003bcc;
+}
+</style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://cdn.discordapp.com/attachments/1303304916265074689/1437045911460253811/file_00000000255872069e0816c1465e0288.png?ex=6911d0cc&is=69107f4c&hm=931b906b9d80485762e27b77bb3098f9d93ea405307e3483ce4746ebc6d4a0e9&" alt="1955 Logo">
+  </div>
+
+  <div class="rev-text">1955</div>
+
+  <div class="profile">
+    <img src="https://cdn.discordapp.com/attachments/1303304916265074689/1437045518919532717/media-2.jpg?ex=6911d06e&is=69107eee&hm=1bb1870fa470f4e0c565d6a4a007a9f0131cc41f32ce02383ca73a45cd51cc81&" alt="Profile">
+    <div class="username">@Butch</div>
+  </div>
+  
+  <!-- === Info Section (Socials) === -->
+  <div class="info">
+    <a href="https://www.facebook.com/profile.php?id=61581578340152" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/robn_znio" target="_blank">Instagram</a>
+    <a href="https://discord.gg/7SgStVBVP" target="_blank">Discord</a>
+  </div>
+
+  <div class="servers">
+    <div class="server-card">
+      <img src="https://cdn.discordapp.com/attachments/1414972618926194898/1426746122872950975/AJfQ9KSkZ9TuDTAU6E1hfkUHC_4xg3ThcRVk5AiO6hoKBBqeVlY4ANPt69FRADPzDeqiF_UlI9tUiQWPAuBReo7yLoJNoPi9PCy0Lpxs944WvH1qQg2M-6s7lHy9KXMbGjzQtfg-kkEfICQQz0s20nyV1EkmB2HYUfJcWHETttEpaAUYVnyYmgs1024-rj.png?ex=6911425f&is=690ff0df&hm=0ef5281ee9b10e03e1ffc4261897dd0bc25877ad78aee23acd45e58972f58bf0&" alt="#Stunna">
+      <h4>#Stunna</h4>
+      <p>Join Us</p>
+      <a href="https://discord.gg/pMJYSA6BP" class="join-btn">Join Server</a>
+    </div>
+
+    <div class="server-card">
+      <img src="https://cdn.discordapp.com/attachments/1400390026617159761/1401960902122536990/file_00000000c0b86230aaa545c5ba3d88e9-1.png?ex=69116616&is=69101496&hm=d0b61cc07db601f1a7c2d14caa8909792155f748ef8b49931934fbdfeb62f548&" alt="#Trapshit">
+      <h4>#Trapshit</h4>
+      <p>Join Us</p>
+      <a href="https://discord.gg/CxXKVs5sp" class="join-btn">Join Server</a>
+    </div>
+    
+
+    <div class="server-card">
+      <img src="https://cdn.discordapp.com/attachments/1417104034279456870/1426657345785561220/file_000000005c2461f99a7f354f7e11cd46.png?ex=69119871&is=691046f1&hm=a9e28269f97092be3ceb6b30807912a2f1eba37fce4ce8a67d85b80aa1dabda5&" alt="1738">
+      <h4>#1738</h4>
+      <p>Join Us</p>
+      <a href="https://discord.gg/egMunuGYV" class="join-btn">Join Server</a>
+    </div>
+  </div>
+
+<script>
+    // Gumagawa ng random floating red dots sa background
+    const body = document.body;
+    for (let i = 0; i < 30; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('particle');
+      dot.style.top = Math.random() * 100 + 'vh';
+      dot.style.left = Math.random() * 100 + 'vw';
+      dot.style.animationDuration = (3 + Math.random() * 3) + 's';
+      body.appendChild(dot);
+    }
+  </script>
+</body>
+</html>
